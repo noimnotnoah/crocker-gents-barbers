@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crocker Gents Barbers | Plymouth</title>
+<meta name="description" content="Crocker Gents Barbers — traditional gentleman's barber in Plymouth. Heritage cuts, hot towels, and old-fashioned service.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap');
+:root { --heritage-green: #1b3a2d; --dark-green: #0f241c; --gold: #b8962e; --light-gold: #d4b44a; --cream: #f4efe6; --dark-cream: #e5dccf; }
+body { font-family: 'Merriweather', serif; background: var(--cream); color: #2a1f14; }
+h1,h2,h3 { font-family: 'Playfair Display', serif; }
+.hero {
+  background: linear-gradient(160deg, var(--dark-green) 0%, var(--heritage-green) 60%, #1f4a36 100%);
+  color: var(--cream); padding: 100px 20px 80px; text-align: center;
+  border-bottom: 4px solid var(--gold);
+  position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 8px;
+  background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 20px, transparent 20px, transparent 40px);
+}
+.hero h1 { font-size: 3em; color: var(--gold); letter-spacing: 1px; }
+.hero .subtitle { font-size: 1.1em; color: #a8c8b8; letter-spacing: 3px; text-transform: uppercase; margin-top: 8px; font-style: italic; }
+.hero .cta {
+  display: inline-block; background: var(--gold); color: var(--dark-green); padding: 14px 40px;
+  border-radius: 2px; text-decoration: none; font-weight: 700; transition: .3s; margin-top: 25px; letter-spacing: 1px;
+}
+.hero .cta:hover { background: var(--light-gold); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 70px 0; }
+.section h2 { text-align: center; font-size: 2em; color: var(--heritage-green); margin-bottom: 50px; position: relative; }
+.section h2::after { content: ''; display: block; width: 70px; height: 2px; background: var(--gold); margin: 12px auto 0; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 25px; }
+.service-card {
+  background: white; padding: 30px 20px; text-align: center;
+  border-left: 4px solid var(--gold); box-shadow: 0 2px 12px rgba(27,58,45,0.06); transition: .3s;
+}
+.service-card:hover { border-left-color: var(--heritage-green); background: #faf7f0; }
+.service-card h3 { color: var(--heritage-green); font-size: 1.3em; }
+.service-card .price { color: var(--gold); font-size: 1.4em; font-weight: 700; margin: 10px 0; font-family: 'Playfair Display', serif; }
+.heritage {
+  background: var(--dark-green); color: var(--cream);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='10' y='30' fill='%23b8962e' fill-opacity='0.04' font-size='60'%3E%26%2310083%3B%3C/text%3E%3C/svg%3E");
+}
+.heritage h2 { color: var(--cream); }
+.heritage h2::after { background: var(--gold); }
+.heritage-content { max-width: 800px; margin: 0 auto; text-align: center; }
+.heritage-content p { font-size: 1.05em; line-height: 1.9; color: #c4d4cc; }
+.heritage-content .sig { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.2em; margin-top: 20px; font-style: italic; }
+.pricing-alt { background: #eae3d8; }
+.pricing-table { max-width: 600px; margin: 0 auto; }
+.pricing-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px dashed #d0c8ba; }
+.pricing-row:last-child { border-bottom: none; }
+.pricing-row .service { font-weight: 700; color: var(--heritage-green); }
+.pricing-row .cost { color: var(--gold); font-weight: 700; font-size: 1.1em; }
+.contact { background: var(--cream); }
+.contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.contact-content p { margin: 12px 0; font-size: 1em; }
+.contact-content a { color: var(--heritage-green); text-decoration: none; }
+.contact-content a:hover { text-decoration: underline; }
+.contact-content strong { color: var(--heritage-green); }
+.testimonial { font-style: italic; border-left: 3px solid var(--gold); padding-left: 20px; margin-top: 20px; color: #5a4a38; }
+footer {
+  background: var(--dark-green); color: #889f93; text-align: center; padding: 30px 20px; font-size: 0.9em; border-top: 2px solid var(--gold);
+}
+footer a { color: var(--gold); text-decoration: none; }
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2em; }
+  .contact-content { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>💈 Crocker Gents Barbers</h1>
+  <p class="subtitle">Traditional Gentlemen's Barber — Plymouth</p>
+  <p style="margin:18px 0;color:#a8c8b8;">Quality cuts &amp; old-fashioned service since day one</p>
+  <a href="#contact" class="cta">Book Appointment</a>
+</header>
+
+<section class="section" id="services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><h3>✂️ Gentleman's Cut</h3><p>Scissor &amp; clipper</p><p class="price">£15</p></div>
+      <div class="service-card"><h3>🪒 Traditional Shave</h3><p>Hot towel &amp; cut-throat</p><p class="price">£18</p></div>
+      <div class="service-card"><h3>🧔 Beard Groom</h3><p>Trim &amp; shape</p><p class="price">£9</p></div>
+      <div class="service-card"><h3>👦 Young Gent</h3><p>Under 16</p><p class="price">£11</p></div>
+      <div class="service-card"><h3>💇 Restyle</h3><p>Consultation &amp; cut</p><p class="price">£20</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section heritage" id="heritage">
+  <div class="container">
+    <h2>Heritage &amp; Tradition</h2>
+    <div class="heritage-content">
+      <p>Crocker Gents Barbers is a traditional Plymouth barbershop rooted in the craft of gentlemanly grooming. We take our time with every cut — scissor work, hot towels, and the kind of conversation that belongs in a proper barber's chair. No rushing, no fuss; just a great cut and a warm welcome.</p>
+      <p class="sig">— The Crocker Team</p>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing-alt" id="pricing">
+  <div class="container">
+    <h2>Pricing</h2>
+    <div class="pricing-table">
+      <div class="pricing-row"><span class="service">Gentleman's Cut</span><span class="cost">£15</span></div>
+      <div class="pricing-row"><span class="service">Traditional Shave</span><span class="cost">£18</span></div>
+      <div class="pricing-row"><span class="service">Beard Groom</span><span class="cost">£9</span></div>
+      <div class="pricing-row"><span class="service">Young Gent (U16)</span><span class="cost">£11</span></div>
+      <div class="pricing-row"><span class="service">Restyle</span><span class="cost">£20</span></div>
+      <div class="pricing-row"><span class="service">Cut &amp; Shave Combo</span><span class="cost">£28</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="contact-content">
+      <div>
+        <p><strong>📍 Address:</strong> Plymouth</p>
+        <p><strong>📞 Phone:</strong> <a href="tel:+441752000002">01752 000002</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:crockerbarbers@hotmail.com">crockerbarbers@hotmail.com</a></p>
+        <p><strong>🕐 Hours:</strong> Tue–Sat 9am–5pm</p>
+        <div class="testimonial">
+          "Best traditional barber in Plymouth — always leave feeling sharp." — Regular client
+        </div>
+      </div>
+      <div style="background:var(--heritage-green);border-radius:2px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--cream);font-size:1.2em;">
+        🗺️ Plymouth City Centre
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Crocker Gents Barbers, Plymouth</p>
+  <p>📧 <a href="mailto:crockerbarbers@hotmail.com">crockerbarbers@hotmail.com</a></p>
+</footer>
+</body>
+</html>
